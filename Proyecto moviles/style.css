@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  color: #323232;
+  line-height: 1;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  padding: 0 6rem;
+  z-index: 100;
+  border-bottom: 2px solid #008774;
+}
+
+/* .nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+} */
+
+.header {
+  padding: 0 3rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav_menu{
+  width: 50px;
+}
+
+.nav_busqueda{
+  width: 25px;
+}
+
+.carrito {
+  width: 50px;
+}
+.footer {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  
+  background-color: #FFDAB0; /* Color de fondo del footer */
+  padding: 20px; /* Ajusta el relleno para que el color de fondo del footer sea más grande */
+}
+
+.QYA, .contactos {
+  flex: 1;
+  background-color: #B0E8FF; /* Color de fondo de los div */
+  padding: 10px; /* Ajusta el relleno para los div */
+}
+
+/* Estilos adicionales para cada div */
+.QYA {
+  text-align: left;
+}
+
+.contactos {
+  text-align: right;
+   
+}
+
+.contacto_icon {
+  display: block; /* Cada icono es un bloque */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-top: 10px; /* Añadido margen superior para separarlos */
+}
+
+.contacto_item {
+  display: flex;
+  align-items: center;
+  text-align: right; 
+  transform: translateX(70%);
+
+}
+
+.contacto_item img {
+  width: 24px; /* Ajusta el ancho de las imágenes según tus necesidades */
+  margin-right: 10px; /* Ajusta el margen entre la imagen y el texto */
+}
+
+.contacto_icon p {
+  margin: 0;
+  display: block; /* Para que cada <p> esté en una nueva línea */
+}
+
+
+
+
+
+
+
+
