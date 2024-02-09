@@ -63,29 +63,50 @@
     font-family: 'Karla', sans-serif;
     font-weight: 500;
 }
+.title--ofertas {
+    font-family: "Lato", sans-serif;
+    font-weight:700 ;
+    font-size: 24px;
+  }
 
-.QYA--title {
+.ofertas {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+}
+
+.precio--ofertas {
+    font-size: 16px;
+}
+
+
+.nombre--ofertas {
+    font-size: 16px;
+}
+
+ .QYA--title {
     font-family: "Lato", sans-serif;
     font-weight:700 ;
     margin-bottom: 24px;
     margin-top: 12px;
     margin-left:64px;
-}
+} 
 
-.contactanos--title {
+ .contactanos--title {
     font-family: "Lato", sans-serif;
     font-weight:700 ;
-    margin-bottom: 24px;
-    margin-top: 12px;
+    margin-bottom: 12px;
     margin-right:32px;
-}
-
+    margin-top: 12px;
+} 
+ 
 .pregunta {
     padding-left: 12px;
-    margin: 18px;
+    margin: 14px;
     
-}
+} 
 
-.contactanos_item {
+ .contactos--content {
     margin-bottom: 16px;
-}
+    margin-right: 32px;
+}  
+
