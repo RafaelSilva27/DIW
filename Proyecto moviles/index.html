@@ -6,6 +6,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="especificas.css">
+  <script src="script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -23,7 +24,9 @@
       </div>
       <img src="img/logo.png" alt="logo" class="logo" id="logo_icon">
       <img src="img/carrito.svg" alt="carrito" class="carrito" id="carrito_icon">
-      <img src="img/user.svg" alt="user" class="user" id="user_icon">
+      <a class="btn--show-modal" href="#">
+        <img src="img/user.svg" alt="user" class="user" id="user_icon">
+      </a>
     </nav>
   </header>
    <!-- Body -->
@@ -51,66 +54,98 @@
           </p>
       </div>
     </div>
-    <div class="recomendados--categorias">
-      <ul>
-        <li>Auriculares</li>
-        <li>Componentes</li>
-        <li>Fundas</li>
-        <li>Moviles</li>
-      </ul>
-    </div>
-    <div class="recomendados--carrusel">
       
+    <div class="recomendados--carrusel">
+      <div class="carrusel--categorias">
+        <label class="categoria activo">Movil</label>
+        <label class="categoria">Auriculares</label>
+        <label class="categoria">Fundas</label>
+        <label class="categoria">Componentes</label>
+        <!-- <ul>
+          <li class="categoria"></li>
+          <li class="categoria"></li>
+          <li class="categoria"></li>
+          <li class="categoria"></li>
+        </ul> -->
+      </div>
+       <div class="completo">
+        <div class="centrado"></div>
+        <img src="img/samsung-a54.jpg" alt="imagen 1" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 2" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 3" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 4" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 5" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 6" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 7" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 8" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 5" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 6" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 7" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 8" class="img">
+      </div> 
     </div>
   </div>
 
   <!-- Categoria IPHONE -->
 
   <div class="iphone">
-    <div class= "contenidoRecomendados">
-      <div class="title--samsung">
-        <h2>SAMSUNG</h2>
-      </div>
-      <div class="text--samsung">
-        <p>Nuestros productos <strong>Samsung</strong> siempre <strong>a la última</strong>
-          </p>
-      </div>
+    <div class="contenidoRecomendadosIphone">
+        <div class="title--iphone">
+            <h2>IPHONE</h2>
+        </div>
+        <div class="text--iphone">
+            <p>Nuestros productos <strong>Samsung</strong> siempre <strong>a la última</strong></p>
+        </div>
     </div>
-    <div class="recomendados--categorias">
-      Auriculares
-      <img src="img/samsung-a54.jpg" alt="">
-      <img src="img/samsung-s22.jpg" alt="">
-      <img src="img/samsung-zfold.jpg" alt="">
-      
-      Componentes
-      Fundas
-      Móviles
-      </div>
-    <div class="recomendados--carrusel">
-      
+    <div class="recomendados--categoriasIphone">
+        <div class="categoriaIphone">
+            <span>Auriculares | 200€</span>
+            <img src="img/iphone-XR.jpg" alt="">
+        </div>
+        <div class="categoriaIphone">
+            <span>Componentes</span>
+            <img src="img/iphone-reloj.jpg" alt="">
+        </div>
+        <div class="categoriaIphone">
+            <span>Fundas</span>
+            <img src="img/iphone-cascos.jpg" alt="">
+        </div>
+        <div class="categoriaIphone">
+            <span>Móviles</span>
+            <img src="img/iphone-14.jpg" alt="">
+        </div>
     </div>
   </div>
 
+
   <!-- Categoria SAMSUNG -->
 
-  <div class="samsung">
-    <div class= "contenidoRecomendados">
-      <div class="title--samsung">
-        <h2>SAMSUNG</h2>
-      </div>
-      <div class="text--samsung">
-        <p>Nuestros productos <strong>Samsung</strong> siempre <strong>a la última</strong>
-          </p>
-      </div>
+  <div class="Samsung">
+    <div class="contenidoRecomendadosSamsung">
+        <div class="title--Samsung">
+            <h2>SAMSUNG</h2>
+        </div>
+        <div class="text--Samsung">
+            <p>Nuestros productos <strong>Samsung</strong> siempre <strong>a la última</strong></p>
+        </div>
     </div>
-    <div class="recomendados--categorias">
-      Auriculares
-      Componentes
-      Fundas
-      Móviles
-      </div>
-    <div class="recomendados--carrusel">
-      
+    <div class="recomendados--categoriasSamsung">
+        <div class="categoriaSamsung">
+            <span>Auriculares</span>
+            <img src="img/samsung-a54.jpg" alt="">
+        </div>
+        <div class="categoriaSamsung">
+            <span>Componentes</span>
+            <img src="img/samsung-s22.jpg" alt="">
+        </div>
+        <div class="categoriaSamsung">
+            <span>Fundas</span>
+            <img src="img/samsung-zfold.jpg" alt="">
+        </div>
+        <div class="categoriaSamsung">
+            <span>Móviles</span>
+            <img src="img/samsung-cascos.jpg" alt="">
+        </div>
     </div>
   </div>
 
@@ -136,6 +171,9 @@
       <p class="pregunta">¿Quienes somos?</p>
       <p class="pregunta">¿Por qué comprar?</p>
       <p class="pregunta">Más preguntas aquí</p>
+    </div>
+    <div class="logo-footer">
+      <img src="img/logo-recortado.png">
     </div>
     <div class="contactos">
       <h4 class="contactanos--title">Contáctanos</h4>
@@ -167,5 +205,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Ventana modal de login -->
+  <div class="modal hidden">
+    <button class="btn--close-modal">&times;</button>
+    <h2 class="modal__header">
+      Iniciar Sesion <br />
+    </h2>
+    <form class="modal__form">
+      <label>Email</label>
+      <input type="text" />
+      <label>Contraseña</label>
+      <input type="text" />
+      <button class="btn">Login </button>
+    </form>
+  </div>
+  <div class="overlay hidden"></div>
+  
 </body>
 </html>

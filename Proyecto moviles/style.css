@@ -140,6 +140,7 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
+  
 }
 
 .contenidoRecomendados{
@@ -149,29 +150,221 @@
 }
 
 
-.recomendados--categoria{
-  margin-top: 30px;
-}
 
-/* -------------------------------Categoria SAMSUNG------------------- */
-
-.samsung{
-  background-color: rgba(255, 136, 0, 0.6);
-  list-style: none;
+.recomendados--carrusel {
+  
+  width: 50%;
+  max-width: 100em;
+  background-color: lightblue;
   display: flex;
-  justify-content: space-between;
-  /* margin-top: 20px;
-  margin-bottom: 10px; */
+  padding: 2em;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 15px;
+}
+.recomendados--carrusel .completo {
+  width: calc(200% + (12 * 32px));
+  padding: 2em;
+  
+  display: flex;
+  flex-flow: row nowrap;
+  
+  gap: 32px;
+
+  transition: all 1s ease;
+  
 }
 
-.text--samsung{
+.recomendados--carrusel .img {
+  width: calc( 100% / 2);
+  background-color: lime;
+  transform: translateX(-255%);
+  
+}
+
+.carrusel--categorias {
+  width: 100%;
+  margin: 1em 0 0 ;
+  padding: .4em;
+  transform: translateY(-25%);
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.categoria {
+  
+  width: 2em;
+  height: 2em;
+  margin: 1em 1em 0;
+}
+
+.categoria.activo {
+  text-decoration: underline;
+  
+} 
+
+/* -------------------------------Categoria IPHONE------------------- */
+
+
+.iphone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #B0E8FF;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.contenidoRecomendadosIphone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+.title--iphone {
+  text-align: center;
   margin-bottom: 10px;
 }
-.recomendados--categorias {
-  margin-top: 10px;
-  word-spacing: 70px;
+
+.title--iphone h2 {
+  font-size: 2em;
+  font-weight: bold;
 }
 
+
+.text--iphone p {
+  text-align: center;
+  font-size: 1em;
+}
+
+
+.recomendados--categoriasIphone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.categoriaIphone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  background-color: rgb(238, 149, 47);
+}
+
+.categoriaIphone span {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.categoriaIphone img {
+  width: 200px;
+  height: 200px;
+}
+
+/* @media screen and (max-width: 768px) {
+  .recomendados--categoriasIphone {
+    flex-direction: column;
+  }
+
+  .categoriaIphone {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .categoriaIphone {
+    width: 100%;
+  }
+} */
+
+
+/* ------------------------------- Categoria SAMSUNG------------------ */
+
+.Samsung {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background-color:rgba(255, 136, 0, 0.6);
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.contenidoRecomendadosSamsung {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+.title--Samsung {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title--Samsung h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+.text--iphone p {
+  text-align: center;
+  font-size: 1em;
+}
+
+
+.recomendados--categoriasSamsung {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.categoriaSamsung {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  width: 200px;
+  background-color: #B0E8FF;
+}
+
+.categoriaSamsung span {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.categoriaSamsung img {
+  width: 100%;
+  height: auto;
+}
 
 /* ------------------------------- Categrias --------------------------*/
 
@@ -204,7 +397,7 @@
   padding: 20px; 
 }
 
-.QYA, .contactos {
+.QYA, .contactos, .logo-footer {
   flex: 1;
   background-color: #B0E8FF; 
   padding: 10px;
@@ -218,6 +411,12 @@
   display: flex;
   flex-direction: column;
   align-items: end;
+}
+
+.logo-footer img {
+  width: 100px;
+  margin-top: 30px;
+  margin-left: 150px;
 }
 
 .contactos * {
@@ -246,6 +445,76 @@
   display: block; 
   text-align: right;
 }
+
+/* Modal de login */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 40rem; /* Reduciendo el max-width */
+  background-color: #f3f3f3;
+  padding: 3rem 4rem; /* Reduciendo el padding */
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3); /* Reduciendo el tamaño de la sombra */
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.modal__header {
+  font-size: 2.5rem; /* Reduciendo el tamaño del texto */
+  margin-bottom: 3rem; /* Reduciendo el espacio debajo del encabezado */
+  line-height: 1.5;
+}
+
+.modal__form {
+  margin: 0 1.5rem; /* Reduciendo el margen interior */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1.5rem; /* Reduciendo el espacio entre los elementos del formulario */
+}
+
+.modal__form label {
+  font-size: 1.5rem; /* Reduciendo el tamaño del texto de las etiquetas */
+  font-weight: 500;
+}
+
+.modal__form input {
+  font-size: 1.5rem; /* Reduciendo el tamaño del texto de los inputs */
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.modal__form button {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-top: 1rem;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem; /* Ajustando la posición del botón de cerrar */
+  font-size: 3rem; /* Reduciendo el tamaño del botón de cerrar */
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,7 @@
+hover en los iconos del header
+smoth en las categorias
+modal formulario en user
+modal en menu hamburguesa
+carrusel 
+
+en css 
