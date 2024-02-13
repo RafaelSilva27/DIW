@@ -52,4 +52,46 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+const modalMenu = document.querySelector('.modal-menu');
+const overlayMenu = document.querySelector('.overlay-menu');
+const btnCloseModalMenu = document.querySelector('.btn--close-modal-menu');
+const btnOpenModalMenu = document.querySelector('.nav_menu');
 
+const openModalMenu = function () {
+  modalMenu.classList.add('active');
+  overlayMenu.classList.add('active');
+};
+
+const closeModalMenu = function () {
+  modalMenu.classList.remove('active');
+  overlayMenu.classList.remove('active');
+};
+
+btnOpenModalMenu.addEventListener('click', openModalMenu); // Agregamos el listener para abrir el menú
+btnCloseModalMenu.addEventListener('click', closeModalMenu);
+overlayMenu.addEventListener('click', closeModalMenu);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && modalMenu.classList.contains('active')) {
+    closeModalMenu();
+  }
+});
+
+
+
+// ----------------------- Scroll de las categorías -----------------------
+
+function scrollToSection(sectionClass) {
+  document.querySelector(sectionClass).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+// Función específica para desplazarse a la sección de iPhone
+function scrollToIphone() {
+  scrollToSection('.iphone');
+}
+
+function scrollToSamsung() {
+  scrollToSection('.Samsung');
+}

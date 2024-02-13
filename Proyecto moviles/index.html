@@ -56,33 +56,36 @@
     </div>
       
     <div class="recomendados--carrusel">
-      <div class="carrusel--categorias">
-        <label class="categoria activo">Movil</label>
-        <label class="categoria">Auriculares</label>
-        <label class="categoria">Fundas</label>
-        <label class="categoria">Componentes</label>
-        <!-- <ul>
-          <li class="categoria"></li>
-          <li class="categoria"></li>
-          <li class="categoria"></li>
-          <li class="categoria"></li>
-        </ul> -->
-      </div>
-       <div class="completo">
-        <div class="centrado"></div>
-        <img src="img/samsung-a54.jpg" alt="imagen 1" class="img">
-        <img src="img/samsung-a54.jpg" alt="imagen 2" class="img">
-        <img src="img/samsung-a54.jpg" alt="imagen 3" class="img">
+
+      <div class="completo">
+        
+        <div class="imagenes">
+          <p>120€</p>
+          <img src="img/samsung-a54.jpg" alt="21321312" class="img">
+        </div>
+
+        <div class="imagenes">
+          <p>120€</p>
+          <img src="img/samsung-a54.jpg" alt="2131231231232131231231232" class="img">
+          </div> 
+
         <img src="img/samsung-a54.jpg" alt="imagen 4" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 5" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 6" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 7" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 8" class="img">
-        <img src="img/samsung-a54.jpg" alt="imagen 5" class="img">
-        <img src="img/samsung-a54.jpg" alt="imagen 6" class="img">
-        <img src="img/samsung-a54.jpg" alt="imagen 7" class="img">
-        <img src="img/samsung-a54.jpg" alt="imagen 8" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 9" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 10" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 11" class="img">
+        <img src="img/samsung-a54.jpg" alt="imagen 12" class="img">
+      
       </div> 
+      <ul class="carrusel--categorias">
+          <li class="categoria activo"></li>
+          <li class="categoria"></li>
+          <li class="categoria"></li>
+          <li class="categoria"></li>
+        </ul>
     </div>
   </div>
 
@@ -99,19 +102,19 @@
     </div>
     <div class="recomendados--categoriasIphone">
         <div class="categoriaIphone">
-            <span>Auriculares | 200€</span>
+            <span>Iphone XR | 800€</span>
             <img src="img/iphone-XR.jpg" alt="">
         </div>
         <div class="categoriaIphone">
-            <span>Componentes</span>
+            <span>Apple watch | 359€</span>
             <img src="img/iphone-reloj.jpg" alt="">
         </div>
         <div class="categoriaIphone">
-            <span>Fundas</span>
+            <span>AirPods | 240€</span>
             <img src="img/iphone-cascos.jpg" alt="">
         </div>
         <div class="categoriaIphone">
-            <span>Móviles</span>
+            <span>Iphone 14 | 1200€</span>
             <img src="img/iphone-14.jpg" alt="">
         </div>
     </div>
@@ -131,19 +134,19 @@
     </div>
     <div class="recomendados--categoriasSamsung">
         <div class="categoriaSamsung">
-            <span>Auriculares</span>
+            <span>Samsung A14 | 630€</span>
             <img src="img/samsung-a54.jpg" alt="">
         </div>
         <div class="categoriaSamsung">
-            <span>Componentes</span>
+            <span>Samsung S24 | 780€</span>
             <img src="img/samsung-s22.jpg" alt="">
         </div>
         <div class="categoriaSamsung">
-            <span>Fundas</span>
+            <span>Samsung zFlip | 870€</span>
             <img src="img/samsung-zfold.jpg" alt="">
         </div>
         <div class="categoriaSamsung">
-            <span>Móviles</span>
+            <span>Galaxy Buds | 150€</span>
             <img src="img/samsung-cascos.jpg" alt="">
         </div>
     </div>
@@ -154,8 +157,8 @@
   <div class="Categorias">
     <h2 class="titulo"><u>Categorías</u></h2>
       <div class="logos-arriba">
-          <img src="img/iphone-logo.jpg" class="logoIphone">
-          <img src="img/Logo_samsung_5.jpg" class="logoSamsung">
+          <img src="img/iphone-logo.jpg" class="logoIphone" onclick="scrollToSection('.iphone')">
+          <img src="img/Logo_samsung_5.jpg" class="logoSamsung" onclick="scrollToSection('.Samsung')">
       </div>
       <div class="logos-abajo">
           <img src="img/xiaomi-logo.jpg" class="logoXiaomi">
@@ -207,6 +210,7 @@
   </footer>
 
   <!-- Ventana modal de login -->
+
   <div class="modal hidden">
     <button class="btn--close-modal">&times;</button>
     <h2 class="modal__header">
@@ -217,10 +221,26 @@
       <input type="text" />
       <label>Contraseña</label>
       <input type="text" />
-      <button class="btn">Login </button>
+      <button class="btn-login">Login </button>
     </form>
   </div>
   <div class="overlay hidden"></div>
+
+  <!-- Ventana modal menu hamburguesa -->
+
+  <div class="modal-menu hidden">
+    <button class="btn--close-modal-menu">&times;</button>
+    <h2 class="modal__header">
+      Menú <br />
+    </h2>
+    <ul>
+      <li>Samsung</li>
+      <li>Iphone</li>
+      <li>Xiaomi</li>
+      <li>Huawei</li>
+    </ul>
+  </div>
+  <div class="overlay-menu hidden"></div>
   
 </body>
 </html>
