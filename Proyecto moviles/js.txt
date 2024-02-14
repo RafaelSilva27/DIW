@@ -1,7 +1,7 @@
-hover en los iconos del header
-smoth en las categorias
+hover en los iconos del header - hecho
+smoth en las categorias - hecho
 modal formulario en user - hecho
-modal en menu hamburguesa
+modal en menu hamburguesa - hecho
 carrusel 
-
- 
+sticky arreglo
+login formulario tca

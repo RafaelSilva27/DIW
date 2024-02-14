@@ -16,8 +16,8 @@
   <!-- Header -->
   <header class="header">
     <nav class="nav sticky">
-      <img
-        src="img/menu_hamburguesa.svg" alt="menu hamburguesa" class="nav_menu" id="menu_icon"/>
+      <img src="img/menu_hamburguesa.svg" alt="menu hamburguesa" class="nav_menu btn-icon" id="menu_icon"/>
+
       <div class="busqueda">
         <img src="img/lupa.svg" alt="lupa" class="nav_busqueda" id="lupa_icon">
         <input type="text" class="busqueda" id="busqueda" placeholder="Búsqueda">
@@ -37,7 +37,7 @@
       Ofertas de Temporada</div>
       
       <div class="texto--ofertas">Los <strong>precios más bajos</strong> del mercado <strong>aquí.</strong><br><br>Tus <strong>productos favoritos</strong>  de tecnología con <br> <b>ofertas y descuentos exclusivos</b>.</div>
-      <div class="card--ofertas"> <div class="img--ofertas"><img src="img/iphone.png" class="imagen--ofertas"><div class="nombre--ofertas">iPhone 15</div></div>
+      <div class="card--ofertas"> <p class="etiqueta">10 %</p><div class="img--ofertas"><img src="img/iphone.png" class="imagen--ofertas"><div class="nombre--ofertas">iPhone 15</div></div>
       <div class="precio--ofertas"><del class="precioAntiguo--ofertas">1299</del>    1049€</div>
     </div>
   </div> 
@@ -59,16 +59,15 @@
 
       <div class="completo">
         
-        <div class="imagenes">
-          <p>120€</p>
-          <img src="img/samsung-a54.jpg" alt="21321312" class="img">
-        </div>
 
-        <div class="imagenes">
-          <p>120€</p>
-          <img src="img/samsung-a54.jpg" alt="2131231231232131231231232" class="img">
-          </div> 
 
+        <div class="card--carrusel">
+        <img src="img/samsung-a54.jpg" alt="img1" class="img">
+      </div>
+      <div class="card--carrusel">
+        <img src="img/samsung-a54.jpg" alt="img1" class="img">
+      </div>
+        <img src="img/samsung-a54.jpg" alt="img2" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 4" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 5" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 6" class="img">
@@ -78,8 +77,8 @@
         <img src="img/samsung-a54.jpg" alt="imagen 10" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 11" class="img">
         <img src="img/samsung-a54.jpg" alt="imagen 12" class="img">
-      
-      </div> 
+      </div>
+
       <ul class="carrusel--categorias">
           <li class="categoria activo"></li>
           <li class="categoria"></li>
@@ -226,21 +225,22 @@
   </div>
   <div class="overlay hidden"></div>
 
-  <!-- Ventana modal menu hamburguesa -->
+<!-- Menú lateral -->
+<div id="modal-menu" class="modal-menu">
 
-  <div class="modal-menu hidden">
-    <button class="btn--close-modal-menu">&times;</button>
-    <h2 class="modal__header">
-      Menú <br />
-    </h2>
-    <ul>
-      <li>Samsung</li>
-      <li>Iphone</li>
-      <li>Xiaomi</li>
-      <li>Huawei</li>
-    </ul>
-  </div>
-  <div class="overlay-menu hidden"></div>
+  <button id="btn-close-menu" class="btn--close-modal">&times;</button>
+  <h2 class="modal-menu__header">Menú</h2>
+  <ul>
+    <li class="clickLista" onclick="scrollToSection('.Samsung')">Samsung</li>
+    <li class="clickLista" onclick="scrollToSection('.categoria')">Iphone</li>
+    <li class="clickLista">Xiaomi</li>
+    <li class="clickLista">Huawei</li>
+  </ul>
+</div>
+
+<!-- Overlay del menú -->
+<div id="overlay-menu" class="overlay-menu"></div>
+
   
 </body>
 </html>

@@ -5,7 +5,7 @@
 /* --------------------------- Body ------------------------------------ */
 .body {
   font-family: "Karla", sans-serif;
-  color: #000000;
+  color: #323232;
   line-height: 1;
 }
 /* --------------------------- Header ------------------------------------ */
@@ -15,6 +15,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 
 .busqueda {
   position: relative;
@@ -33,8 +34,8 @@
   transform: translateX(50%);
   transform: translateY(-50%);
   z-index: 1;
-
 }
+
 /* --------------------------- Nav ------------------------------------ */
 .nav {
   display: flex;
@@ -46,10 +47,8 @@
   z-index: 100;
   border-bottom: 2px solid #008774;
 }
-.nav.sticky {
-  position: fixed;
-  background-color: rgba(255, 255, 255);
-}
+
+
 .logo {
   width: 120px;
   margin-top: 20px;
@@ -81,7 +80,7 @@
   background-color: #FF8800;
   border-radius: 15px;
   padding: 28px;
-  margin-top: 112px;
+  /* margin-top: 112px; */
   margin-bottom: 28px;
   margin-left: 48px;
   margin-right:48px ;
@@ -129,87 +128,89 @@
   grid-column: 3;
   background-color: #B0E8FF;
   padding-bottom: 12px;
-  padding-top: 12px;
+  padding-top: 14px;
+  
   transform: translateY(-5%); 
   border-radius: 15px;
+  position: relative;
   
 }
+
+.etiqueta {
+  width: 15%;
+  padding: 4px;
+  background-color: #008774;
+  color: white;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin-top: 12px;
+  transform: rotate(40deg);
+  font-size: 15px;
+  overflow: auto;
+  
+  text-align: center;
+  border-radius: 5px;
+}
+
 
 /* -------------------------- Recomendados para ti ------------------- */
 
-.recomendados{
-  background-color: rgba(255, 136, 0, 0.6);
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  
-}
-
-.contenidoRecomendados{
-  text-align: left;
-  margin-left: 30px;
-  margin-top: 10px;
-}
-
-
-
+/* Estilos para dispositivos más grandes */
 .recomendados--carrusel {
-  width: 44%;
-  
-  max-width: 100em;
+  width: 45%;
   background-color: lightblue;
   display: flex;
-  
   padding: 2em;
   overflow: hidden;
   border-radius: 15px;
   margin: 15px;
 }
-.recomendados--carrusel .completo {
-  padding: 2em;
 
-  display: flex;
-  flex-flow: row nowrap;  
-  
-  gap: 32px;
-  
-  transition: all 1s ease;
-  
+.card--carrusel {
+  padding: 10px;
+  background-color: #FF8800;
 }
 
-.recomendados--carrusel .img {
+.recomendados--carrusel .completo {
+  padding: 2em;
+  display: flex;
+  flex-flow: row nowrap;  
+  gap: 32px;
+  transition: all 1s ease;
+}
+
+.img {
   width: calc( 100% / 2);
   background-color: lime;
-  transform: translateX(-15em);
+  /* transform: translateX(-15em); */
   border-radius: 10px;
-  position: relative;
-  display: inline-block;
+
+  display: block;
+}
+
+/* Estilos comunes para todos los tamaños de pantalla */
+
+.recomendados {
+  background-color: rgba(255, 136, 0, 0.6);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenidoRecomendados {
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 10px;
 }
 
 .carrusel--categorias {
   padding: .4em;
   transform: translateY(82%);
   margin-top: 24px;
-  
   display: flex;
   flex-direction: row;
-  
 }
-
- .imagenes p{
-  position: absolute;
-  transform: translate(-120%, -20%); 
-  
-
-  color: white; 
-  padding: 4px;
-  font-size: 24px;
-  z-index: 1;
-  background-color: red;
-  display: flex;
-  flex-direction: row nowrap;
-  
-} 
 
 .categoria {
   margin: 1em 1em 0;
@@ -223,29 +224,6 @@
   color: #008774;
 }
 
-/* .categoriaSamsung {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
-  width: 200px;
-  background-color: #B0E8FF;
-}
-
-.categoriaSamsung span {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.categoriaSamsung img {
-  width: 100%;
-  height: auto;
-} */
 
 /* -------------------------------Categoria IPHONE------------------- */
 
@@ -497,7 +475,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 40rem; /* Reduciendo el max-width */
-  background-color: #f3f3f3;
+  background-color: #B0E4DD;
   padding: 3rem 4rem; /* Reduciendo el padding */
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3); /* Reduciendo el tamaño de la sombra */
   z-index: 1000;
@@ -571,14 +549,14 @@
 .modal-menu {
   position: fixed;
   top: 0;
-  left: 0; /* Ajustamos la posición para que la ventana esté en la izquierda */
-  width: 50%; /* La ventana ocupa la mitad del ancho de la pantalla */
-  height: 100%; /* La ventana ocupa toda la altura de la pantalla */
-  background-color: #f3f3f3;
-  padding: 3rem 4rem;
+  left: 0;
+  width: 30%; /* Ajusta el ancho según sea necesario */
+  height: 100%;
+  background-color: #B0E4DD;
+  padding: 3rem 2rem; /* Ajusta el padding según sea necesario */
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: all 0.5s; /* Mantenemos la transición para otros cambios */
+  transition: transform 0.5s ease; /* Agregamos una transición para el efecto de desplazamiento */
 }
 
 .modal-menu__header {
@@ -608,11 +586,46 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999; /* Asegúrate de que el overlay esté por encima de todo */
-  display: none; /* Ocultar inicialmente */
+  z-index: 999;
+  display: none; /* Por defecto, el overlay está oculto */
 }
 
 .overlay-menu.active {
   display: block; /* Mostrar el overlay cuando la clase "active" está presente */
 }
+
+.ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Quita los puntos de la lista */
+  display: flex; /* Hace que los elementos de la lista se muestren en línea */
+  flex-direction: column; /* Alinear los elementos verticalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.clickLista {
+  cursor: pointer;
+  padding: 1.5rem 0; /* Incrementamos el espacio entre cada elemento */
+  font-size: 2rem; /* Aumentamos el tamaño del texto */
+  transition: color 0.3s ease;
+  display: flex; /* Hace que los elementos de la lista se muestren en línea */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.clickLista:hover {
+  color: #008774; /* Cambia el color al pasar el ratón */
+}
+
+.clickLista::before {
+  content: "•"; /* Agrega un punto antes de cada elemento de la lista */
+  margin-right: 1rem; /* Espacio entre el punto y el texto */
+}
+
+
+
+
+
+
+
+
 

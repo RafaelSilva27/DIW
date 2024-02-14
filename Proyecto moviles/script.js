@@ -52,30 +52,55 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-const modalMenu = document.querySelector('.modal-menu');
-const overlayMenu = document.querySelector('.overlay-menu');
-const btnCloseModalMenu = document.querySelector('.btn--close-modal-menu');
-const btnOpenModalMenu = document.querySelector('.nav_menu');
 
-const openModalMenu = function () {
-  modalMenu.classList.add('active');
-  overlayMenu.classList.add('active');
-};
+//------------------------Funcion para hacer el hover del header-------------------------
 
-const closeModalMenu = function () {
-  modalMenu.classList.remove('active');
-  overlayMenu.classList.remove('active');
-};
+const carritoIcon = document.getElementById('carrito_icon');
+const userIcon = document.getElementById('user_icon');
+const lupaIcon = document.getElementById('lupa_icon');
+const menuHamburguesa = document.getElementById('menu_icon');
 
-btnOpenModalMenu.addEventListener('click', openModalMenu); // Agregamos el listener para abrir el menú
-btnCloseModalMenu.addEventListener('click', closeModalMenu);
-overlayMenu.addEventListener('click', closeModalMenu);
-
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && modalMenu.classList.contains('active')) {
-    closeModalMenu();
-  }
+carritoIcon.addEventListener('mouseenter', () => {
+  carritoIcon.style.transform = 'scale(1.2)';
 });
+
+carritoIcon.addEventListener('mouseleave', () => {
+  carritoIcon.style.transform = 'scale(1)'; 
+});
+
+userIcon.addEventListener('mouseenter', () => {
+  userIcon.style.opacity = '0.7';
+});
+
+userIcon.addEventListener('mouseleave', () => {
+  userIcon.style.opacity = '1';
+});
+
+userIcon.addEventListener('mouseenter', () => {
+  userIcon.style.transform = 'scale(1.2)';
+});
+
+userIcon.addEventListener('mouseleave', () => {
+  userIcon.style.transform = 'scale(1)';
+});
+
+lupaIcon.addEventListener('mouseenter', () => {
+  busquedaInput.style.border = '2px solid blue';
+});
+
+lupaIcon.addEventListener('mouseleave', () => {
+  busquedaInput.style.border = '';
+});
+
+menuHamburguesa.addEventListener('mouseenter', () => {
+  menuHamburguesa.style.transform = 'scale(1.2)';
+});
+
+menuHamburguesa.addEventListener('mouseleave', () => {
+  menuHamburguesa.style.transform = 'scale(1)';
+});
+
+//----------------------- Funcion para sticky del header -----------------------
 
 
 
@@ -87,11 +112,40 @@ function scrollToSection(sectionClass) {
   });
 }
 
-// Función específica para desplazarse a la sección de iPhone
 function scrollToIphone() {
-  scrollToSection('.iphone');
+  scrollToSection('.categoria');
 }
 
 function scrollToSamsung() {
   scrollToSection('.Samsung');
 }
+
+// -------------------------------
+
+const btnOpenMenu = document.getElementById('menu_icon');
+const btnCloseMenu = document.getElementById('btn-close-menu');
+const modalMenu = document.getElementById('modal-menu');
+const overlayMenu = document.getElementById('overlay-menu');
+
+function openMenu() {
+  modalMenu.classList.remove('hidden');
+  overlayMenu.classList.add('active');
+}
+
+function closeMenu() {
+  modalMenu.classList.add('hidden');
+  overlayMenu.classList.remove('active');
+}
+
+btnOpenMenu.addEventListener('click', openMenu);
+
+const listaItems = document.querySelectorAll('.clickLista');
+listaItems.forEach(item => {
+  item.addEventListener('click', () => {
+    closeMenu();
+  });
+});
+
+btnCloseMenu.addEventListener('click', closeMenu);
+
+overlayMenu.addEventListener('click', closeMenu);
