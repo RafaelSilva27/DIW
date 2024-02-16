@@ -1,7 +1,0 @@
-hover en los iconos del header - hecho
-smoth en las categorias - hecho
-modal formulario en user - hecho
-modal en menu hamburguesa - hecho
-carrusel 
-sticky arreglo
-login formulario tca
