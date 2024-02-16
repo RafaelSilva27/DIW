@@ -1,30 +1,30 @@
-const completo = document.querySelector('.completo');
-const categoria = document.querySelectorAll('.categoria');
-const numImagenes = document.querySelectorAll('.img').length;
-let posicionActual = 0;
+// const completo = document.querySelector('.completo');
+// const categoria = document.querySelectorAll('.categoria');
+// const numImagenes = document.querySelectorAll('.img').length;
+// let posicionActual = 0;
 
 // Función para centrar el carrusel al cargar la página
-function centrarCarrusel() {
-  const anchoImagen = 100 / numImagenes;
-  const centro = (100 - (anchoImagen * 2)) / 2; 
-  const operacion = (posicionActual * -100) + centro;
-  completo.style.transform = `translateX(${operacion}%)`;
-}
+// function centrarCarrusel() {
+//   const anchoImagen = 100 / numImagenes;
+//   const centro = (100 - (anchoImagen * 2)) / 2; 
+//   const operacion = (posicionActual * -100) + centro;
+//   completo.style.transform = `translateX(${operacion}%)`;
+// }
 
-window.onload = function() {
-  centrarCarrusel();
-};
+// window.onload = function() {
+//   centrarCarrusel();
+// };
 
-categoria.forEach((cadaCategoria, i) => {
-  categoria[i].addEventListener('click', () => {
-    posicionActual = i;
-    centrarCarrusel();
-    categoria.forEach((cadaCategoria, i) => {
-      categoria[i].classList.remove('activo');
-    });
-    categoria[i].classList.add('activo');
-  });
-});
+// categoria.forEach((cadaCategoria, i) => {
+//   categoria[i].addEventListener('click', () => {
+//     posicionActual = i;
+//     centrarCarrusel();
+//     categoria.forEach((cadaCategoria, i) => {
+//       categoria[i].classList.remove('activo');
+//     });
+//     categoria[i].classList.add('activo');
+//   });
+// });
 
 //--------Funcion para el modal del login de usuario-------
 const modal = document.querySelector('.modal');
@@ -113,13 +113,12 @@ function scrollToSection(sectionClass) {
   });
 }
 
-function scrollToSamsung() {
-  scrollToSection('.scroll--samsung');
+function scrollToIphone() {
+  scrollToSection('.categoria');
 }
 
-
-function scrollToIphone() {
-  scrollToSection('.scroll--iphone');
+function scrollToSamsung() {
+  scrollToSection('.Samsung');
 }
 
 // -------------------------------menu hamburguesa
@@ -153,35 +152,53 @@ btnCloseMenu.addEventListener('click', closeMenu);
 overlayMenu.addEventListener('click', closeMenu);
 
 //---funcion carrusel---
-var swiper = new Swiper('.swiper-container', {
-	navigation: {
-	  nextEl: '.swiper-button-next',
-	  prevEl: '.swiper-button-prev'
-	},
-	slidesPerView: 1,
-	spaceBetween: 10,
-	// init: false,
-	pagination: {
-	  el: '.swiper-pagination',
-	  clickable: true,
-	},
+// var swiper = new Swiper('.swiper-container', {
+// 	navigation: {
+// 	  nextEl: '.swiper-button-next',
+// 	  prevEl: '.swiper-button-prev'
+// 	},
+// 	slidesPerView: 1,
+// 	spaceBetween: 10,
+// 	init: false,
+// 	pagination: {
+// 	  el: '.swiper-pagination',
+// 	  clickable: true,
+// 	},
   
-	breakpoints: {
-    620: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-    },
-    680: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-    },
-    920: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-    },
-    1240: {
-        slidesPerView: 4,
-        spaceBetween: 50,
-    }
+// 	breakpoints: {
+//     620: {
+//         slidesPerView: 1,
+//         spaceBetween: 20,
+//     },
+//     680: {
+//         slidesPerView: 2,
+//         spaceBetween: 40,
+//     },
+//     920: {
+//         slidesPerView: 3,
+//         spaceBetween: 40,
+//     },
+//     1240: {
+//         slidesPerView: 4,
+//         spaceBetween: 50,
+//     }
+//   }
+//     });
+
+const slides = document.querySelector('.slides');
+const slideWidth = document.querySelector('.slide').clientWidth;
+let currentIndex = 0;
+
+document.querySelector('.next').addEventListener('click', () => {
+  if (currentIndex < slides.children.length - 1) {
+    currentIndex++;
+    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   }
-    });
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+});

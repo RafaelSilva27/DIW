@@ -14,10 +14,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
-  top: 0; 
-  background-color: #FFFFFF; 
-  z-index: 1000;
 }
 
 
@@ -84,7 +80,7 @@
   background-color: #FF8800;
   border-radius: 15px;
   padding: 28px;
-  margin-top: 20px;
+  /* margin-top: 112px; */
   margin-bottom: 28px;
   margin-left: 48px;
   margin-right:48px ;
@@ -161,24 +157,14 @@
 /* -------------------------- Recomendados para ti ------------------- */
 
 /* Estilos para dispositivos más grandes */
-.recomendados {
+/* .recomendados {
   background-color: #FF8800;
   overflow: hidden;
   padding-bottom: 24px;
 }
 
-.title--recomendados {
-  margin-left: 72px;
-  margin-top: 12px;
-}
-
-.text--recomendados {
-
-}
-
 .contenidoRecomendados{
   padding: 10px;
-  
 }
 
 .container{
@@ -186,7 +172,6 @@
   width: 90%;
   padding: 10px 40px;
   overflow: hidden;
-  /* padding-right: 32px; */
 }
 .container .swiper-container{
   height: 50%;
@@ -221,7 +206,7 @@
 }
 .container .swiper-slide .card-link{
    text-align: center;
-    background-color: #FFDAB0;
+    background-color: #FF8800;
     border-radius: 12px;
     padding:12px ;
 }
@@ -232,15 +217,49 @@
 .swiper-button-next {
   color: #008774;
   left: 12px !important;
-  transform: translate(4700%, 485%);
+  transform: translate(4700%, 450%);
 }
 .swiper-button-prev{
   color: #008774;
-  transform: translate(2200%, 485%);
+  transform: translate(2200%, 450%);
   
+} */
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
 
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ccc;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #aaa;
+}
 /* -------------------------------Categoria IPHONE------------------- */
 
 
@@ -250,7 +269,7 @@
   align-items: center;
   margin: 0 auto;
   background-color: #B0E8FF;
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 20px;
 }
 
@@ -338,7 +357,7 @@
   align-items: center;
   margin: 0 auto;
   background-color:rgba(255, 136, 0, 0.6);
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 20px;
 }
 
