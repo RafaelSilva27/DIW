@@ -1,8 +1,9 @@
+/* --------------------------- Body ------------------------------------ */
+
 * {
   margin: 0;
   padding: 0;
 }
-/* --------------------------- Body ------------------------------------ */
 
 /* --------------------------- Header ------------------------------------ */
 .header {
@@ -74,27 +75,7 @@
   margin-right: 1.875rem;
 }
 
-@media only screen and (max-width: 768px) {
-  .busqueda {
-    display: none;
-  }
-  .carrito {
-    display: none;
-  }
-  .user {
-    width: 3.125rem;
-    right: 0;
-  }
-  .logo {
-    display: none;
-  }
-  .nav_menu{
-    width: 3.125rem;
-    cursor: pointer;
-    left: 0;
-  }
 
-}
 
 /* --------------------------- Oferta ------------------------------------ */
 .ofertas {
@@ -107,8 +88,6 @@
   margin-right:3rem ;
 
   display: grid;
-  grid-template-columns: 3;
-  grid-template-rows: 2;
   filter: drop-shadow(4px 4px rgb(67, 66, 66));
   
 }
@@ -122,27 +101,6 @@
   margin-left:2.375rem;
   line-height: 1.2;
 }
-.imagen--ofertas {
-  padding-left:8.25rem ;
-  width: 15.625rem;
-  height: 12.5rem;
-}
-
-.nombre--ofertas {
-  padding-left: 7.5rem;
-  margin-left: 6.25rem;
-}
-.precio--ofertas {
-  padding-left: 7.5rem;
-  grid-column: 3;
-  margin-top: 0.75rem;
-  margin-left: 5.3125rem;
-
-}
-
-.precioAntiguo--ofertas {
-  margin-right: 0.75rem;
-}
 
 .card--ofertas {
   grid-column: 3;
@@ -155,6 +113,32 @@
   
 }
 
+.imagen--ofertas {
+  padding-left:8.25rem ;
+  width: 15.625rem;
+  height: 12.5rem;
+  transform: translateX(10%);
+}
+
+.nombre--ofertas {
+  padding-left: 7.5rem;
+  margin-left: 6.25rem;
+  transform: translateX(10%);
+}
+.precio--ofertas {
+  padding-left: 7.5rem;
+  grid-column: 3;
+  margin-top: 0.75rem;
+  margin-left: 5.3125rem;
+  transform: translateX(10%);
+
+}
+
+.precioAntiguo--ofertas {
+  margin-right: 0.75rem;
+  transform: translateX(10%);
+}
+
 .etiqueta {
   width: 15%;
   padding: 4px;
@@ -162,76 +146,16 @@
   right: 0;
   z-index: 1;
   margin-top: 0.75rem;
-  transform: rotate(40deg);
+  transform: rotate(38deg);
   overflow: auto;
   text-align: center;
   border-radius: 5px;
-}
 
-@media only screen and (max-width: 768px) {
-  .ofertas {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .title--ofertas {
-    margin-left: 1.5rem;
-  }
-
-  .texto--ofertas {
-    margin-top: 3rem;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .imagen--ofertas {
-    padding-left: 0;
-    width: 100%;
-    height: auto;
-  }
-
-  .nombre--ofertas {
-    padding-left: 1rem;
-    margin-left: 0;
-  }
-
-  .precio--ofertas {
-    padding-left: 1rem;
-    grid-column: 1;
-    margin-top: 0.75rem;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .precioAntiguo--ofertas {
-    margin-right: 0;
-  }
-
-  .card--ofertas {
-    grid-column: 1;
-    padding-bottom: 0.75rem;
-    padding-top: 0.875rem;
-    transform: translateY(0);
-    position: relative;
-  }
-
-  .etiqueta {
-    width: auto;
-    padding: 4px;
-    position: static;
-    margin-top: 0.75rem;
-    transform: rotate(0);
-    text-align: center;
-    border-radius: 5px;
-  }
 }
 
 
 /* -------------------------- Recomendados para ti ------------------- */
 
-/* Estilos para dispositivos más grandes */
 .recomendados {
   position: relative;
   overflow: hidden;
@@ -262,7 +186,7 @@
   width: 90%;
   
   overflow: hidden;
-  /* padding-right: 32px; */
+
 }
 .container .swiper-container{
   height: 50%;
@@ -300,40 +224,11 @@
    text-align: center;
     border-radius: 0.75rem;
     padding:0.75rem ;
+    cursor: pointer;
 }
 .container .swiper-slide .card-link a{
     text-decoration: none;
 }
-
-/* Media Query para pantallas de hasta 768px de ancho (diseño anterior) */
-@media only screen and (max-width: 768px) {
-  .title--recomendados {
-    margin-left: 3rem; 
-  }
-  
-  .container {
-    margin-top: 4rem;
-    transform: translateX(12%); 
-    width: 80%; 
-  }
-  
-  .container .swiper-container {
-    height: 60%; 
-    width: 100%; 
-  }
-  
-  .container .swiper-slide img {
-    width: 70%; 
-    height: auto; 
-    transform: translateX(25%); 
-  }
-  
-.text--recomendados{
-  display: none;
- }
-
-}
-
 
 
 /* -------------------------------Categoria IPHONE------------------- */
@@ -452,7 +347,7 @@
   height: auto;
 }
 
-/* ------------------------------- Categrias --------------------------*/
+/* ------------------------------------------------------- CATEGORIAS ------------------------------------------------- */
 
 .Categorias {
   text-align: center;
@@ -474,24 +369,6 @@
   width: 9.375rem; 
 }
 
-/* Media Query para pantallas de hasta 768px de ancho */
-@media only screen and (max-width: 768px) {
-  .titulo {
-    margin-top: 0.75rem; 
-  }
-  
-  .logos-arriba,
-  .logos-abajo {
-    flex-direction: column; 
-    align-items: center; 
-  }
-  
-  .logos-arriba img,
-  .logos-abajo img {
-    margin: 0.75rem; 
-    width: 7.5rem; 
-  }
-}
 
 
 /* ------------------------------------------------------- FOOTER ------------------------------------------------- */
@@ -572,41 +449,9 @@
   margin-bottom: 1rem;
   margin-right: 2rem;
 }  
-/* Media Query para pantallas de hasta 768px de ancho */
-@media only screen and (max-width: 768px) {
-  .footer {
-    flex-direction: column; 
-    align-items: center; 
-    padding: 0.625rem; 
-    background-color: #B0E8FF !important; 
-  }
-
-  .QYA--title {
-    margin-left: 0; 
-    text-align: center; 
-  }
-
-  .logo-footer img {
-    margin: 0; 
-  }
-
-  .contacto_icon {
-    text-align: center; 
-  }
-
-  .contactanos--title {
-    margin: 0; 
-    text-align: center; 
-    margin-top: 0.75rem; 
-  }
-
-  .pregunta, .contactos--content {
-    margin: 0.625rem; 
-  }
-}
 
 
-/* Modal de login */
+/* ------------------------------------------------------- MODAL LOGIN ------------------------------------------------- */
 
 .modal {
   position: fixed;
@@ -666,6 +511,8 @@
   visibility: hidden;
   opacity: 0;
 }
+
+/* ------------------------------------------------------- MODAL MENU HAMBURGUESA ------------------------------------------------- */
 
 .modal-menu {
   position: fixed;
